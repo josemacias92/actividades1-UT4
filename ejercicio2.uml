@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:default="http:///schemas/default/_KOpc0Ht1EeuCr_9M454u9w/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/default/_KOpc0Ht1EeuCr_9M454u9w/0 default.profile.uml#_KP5aB3t1EeuCr_9M454u9w">
+  <uml:Model xmi:id="_KOPNIHt1EeuCr_9M454u9w" name="ejercicio2">
+    <eAnnotations xmi:id="_KOPNIXt1EeuCr_9M454u9w" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_KOPNInt1EeuCr_9M454u9w" name="exporterVersion">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_KOPNI3t1EeuCr_9M454u9w" value="3.0.0"/>
+      </contents>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KOPNJHt1EeuCr_9M454u9w" name="Publico">
+      <ownedAttribute xmi:id="_KOPNJXt1EeuCr_9M454u9w" name="dni" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KOPNJnt1EeuCr_9M454u9w" name="nombre" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KOPNJ3t1EeuCr_9M454u9w" name="direccion" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KOPNKHt1EeuCr_9M454u9w" name="telefono" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KOPNKXt1EeuCr_9M454u9w" name="Abonado">
+      <generalization xmi:id="_KOPNKnt1EeuCr_9M454u9w" general="_KOPNJHt1EeuCr_9M454u9w"/>
+      <ownedAttribute xmi:id="_KOPNK3t1EeuCr_9M454u9w" name="entrada" visibility="public" type="_KOP0RXt1EeuCr_9M454u9w" isUnique="false" association="_KOP0Mnt1EeuCr_9M454u9w">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KOPNLHt1EeuCr_9M454u9w" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KOP0MHt1EeuCr_9M454u9w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KOP0MXt1EeuCr_9M454u9w" name="numSocio" visibility="private" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_KOP0Mnt1EeuCr_9M454u9w" memberEnd="_KOPNK3t1EeuCr_9M454u9w _KOP0M3t1EeuCr_9M454u9w">
+      <ownedEnd xmi:id="_KOP0M3t1EeuCr_9M454u9w" visibility="public" type="_KOPNKXt1EeuCr_9M454u9w" isUnique="false" association="_KOP0Mnt1EeuCr_9M454u9w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KOP0NHt1EeuCr_9M454u9w" name="Simpatizante">
+      <generalization xmi:id="_KOP0NXt1EeuCr_9M454u9w" general="_KOPNJHt1EeuCr_9M454u9w"/>
+      <ownedAttribute xmi:id="_KOP0Nnt1EeuCr_9M454u9w" name="entrada" visibility="public" type="_KOP0RXt1EeuCr_9M454u9w" isUnique="false" association="_KOP0OXt1EeuCr_9M454u9w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KOP0N3t1EeuCr_9M454u9w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KOP0OHt1EeuCr_9M454u9w" name="fechaAlta" visibility="private" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_KOP0OXt1EeuCr_9M454u9w" memberEnd="_KOP0Nnt1EeuCr_9M454u9w _KOP0Ont1EeuCr_9M454u9w">
+      <ownedEnd xmi:id="_KOP0Ont1EeuCr_9M454u9w" visibility="public" type="_KOP0NHt1EeuCr_9M454u9w" isUnique="false" association="_KOP0OXt1EeuCr_9M454u9w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KOP0O3t1EeuCr_9M454u9w" name="Partido">
+      <ownedAttribute xmi:id="_KOP0PHt1EeuCr_9M454u9w" name="entrada" visibility="public" type="_KOP0RXt1EeuCr_9M454u9w" isUnique="false" aggregation="composite" association="_KOP0QXt1EeuCr_9M454u9w"/>
+      <ownedAttribute xmi:id="_KOP0PXt1EeuCr_9M454u9w" name="codigo" visibility="protected" isUnique="false">
+        <ownedComment xmi:id="_KOP0Pnt1EeuCr_9M454u9w">
+          <body>&lt;Enter note text here></body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KOP0P3t1EeuCr_9M454u9w" name="nombre" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KOP0QHt1EeuCr_9M454u9w" name="fecha" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_KOP0QXt1EeuCr_9M454u9w" memberEnd="_KOP0PHt1EeuCr_9M454u9w _KOP0Qnt1EeuCr_9M454u9w">
+      <ownedEnd xmi:id="_KOP0Qnt1EeuCr_9M454u9w" visibility="public" type="_KOP0O3t1EeuCr_9M454u9w" isUnique="false" association="_KOP0QXt1EeuCr_9M454u9w">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KOP0Q3t1EeuCr_9M454u9w" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KOP0RHt1EeuCr_9M454u9w"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KOP0RXt1EeuCr_9M454u9w" name="Entrada">
+      <ownedAttribute xmi:id="_KOP0Rnt1EeuCr_9M454u9w" name="precio" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KOP0R3t1EeuCr_9M454u9w" name="numAsiento" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_KOP0SHt1EeuCr_9M454u9w" name="Venta" visibility="public">
+        <ownedParameter xmi:id="_KOP0SXt1EeuCr_9M454u9w" type="_KOP0RXt1EeuCr_9M454u9w" isUnique="false" direction="return">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KOP0Snt1EeuCr_9M454u9w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KOP0S3t1EeuCr_9M454u9w" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_KOP0THt1EeuCr_9M454u9w" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <profileApplication xmi:id="_KRn4UHt1EeuCr_9M454u9w">
+      <eAnnotations xmi:id="_KRsJwHt1EeuCr_9M454u9w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="default.profile.uml#_KP5aB3t1EeuCr_9M454u9w"/>
+      </eAnnotations>
+      <appliedProfile href="default.profile.uml#_KP5aAHt1EeuCr_9M454u9w"/>
+    </profileApplication>
+  </uml:Model>
+  <default:create xmi:id="_KRzegHt1EeuCr_9M454u9w" base_Operation="_KOP0SHt1EeuCr_9M454u9w"/>
+</xmi:XMI>

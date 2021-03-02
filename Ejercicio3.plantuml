@@ -1,0 +1,51 @@
+@startuml Ejercicio3
+
+class Tienda{
+    #cif : string
+    #nombre : string
+    #ubicacion : string
+}
+
+class Equipo{
+    # fechaAlquiler : DateTime
+    # fechaDevolucion : DateTime
+    # alquilado : bool
+    # Alquiler() : DateTime
+    # Devolucion() : bool
+}
+
+class Esqui{
+    # numSerie : int
+}
+
+class MarcaEsquis{
+    # direccionProveedor : string
+    # servTecnico : string
+}
+
+class Gafas{
+    # marca : string
+    # modelo : string
+    # numSerie : int
+}
+
+class Baston{
+    # marca : string
+    # modelo : string
+    # numSerie : int
+}
+
+class Cliente{
+    # dni : string
+    # nombre : string
+    # telefono : int
+}
+
+Tienda "1" --> "*" Equipo
+Equipo "1" *-- "1" Gafas
+Equipo "1" *-- "2" Baston
+Equipo "1" *-- "2" Esqui
+MarcaEsquis "1" --> "*" Esqui
+Cliente "1" --> "1" Equipo
+
+@enduml
